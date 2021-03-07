@@ -1,0 +1,14 @@
+.searchIcon {
+    position: absolute;
+    left: 25px;
+    top: 5px;
+    z-index: 9999; /*this will keep the icon appearing all time, even when on input::focus*/
+}
+
+.absoluteButton {
+    position: absolute;
+    right: 5px;
+    top: 3px;
+    z-index: 9999; /*this will keep the icon appearing all time, even when on input::focus*/
+}
+

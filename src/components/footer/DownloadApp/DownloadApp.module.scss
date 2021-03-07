@@ -1,0 +1,21 @@
+@import "../../../styles/variable";
+
+
+.downloadApp{
+    background-color: $white;
+    border-radius: 111px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 38px 0 50px 0;
+    .mockup{
+       position: absolute;
+       z-index: 9999;
+       left: 140px;
+       bottom: 0px;
+    }
+    .download{
+        margin-left: 300px;
+    }
+}

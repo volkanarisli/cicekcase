@@ -1,0 +1,27 @@
+@import "../../../styles/variable";
+
+.checkoutWrapper {
+    position: relative;
+    margin-left: 230px;
+    .checkout {
+        background: $blue 0% 0% no-repeat padding-box;
+        border-radius: 28px;
+        color: $white;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        padding: 5px 25px;
+    }
+
+    .itemCount {
+        background: $red 0% 0% no-repeat padding-box;
+        border-radius: 50%;
+        font-size: 16px;
+        color: $white;
+        position: absolute;
+        z-index: 9999;
+        right: 0px;
+        top: -10px;
+        padding: 0px 8px;
+    }
+}
