@@ -16,8 +16,14 @@ export const ProductProvider = ({ children }) => {
         })()
 
     }, [setProducts])
+
+    const updateProducts = (query, categoryId) => {
+        (async () => {
+            setProducts(await fetchData(query, categoryId))
+        })()
+    }
     return (
-        <ProductContext.Provider value={[products, setProducts]}>
+        <ProductContext.Provider value={[products, updateProducts]}>
             {children}
         </ProductContext.Provider>
     );

@@ -42,3 +42,26 @@ p {
     margin-top: 30px;
     margin-bottom: 105px;
 }
+
+.tooltip-inner {
+    background-color: $red-two;
+    min-width: 240px;
+    padding: 15px;
+}
+.tooltip.show {
+    opacity: 1;
+}
+
+.arrow {
+    &::before {
+        border-bottom-color: $red-two !important;
+    }
+}
+
+.progress {
+    max-height: 5px;
+    background-color: #d01d32;
+    .progress-bar {
+        background-color: $yellow;
+    }
+}

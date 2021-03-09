@@ -18,17 +18,40 @@ import { BasketContext } from '../../context/BasketContext'
 const ProductCard = ({ product }) => {
 
     const [img, setImage] = useState({})
+    const [amountOnBasket, setAmountOnBasket] = useState(0)
     const [basket, setBasket] = useContext(BasketContext)
 
     const addToBasket = (product) => {
 
-        setBasket(prevItems => {
-            console.log(prevItems)
-            console.log(product)
-            console.log([...prevItems, product])
-            return [...prevItems, product]
+        setBasket(prevItems => [...prevItems, product])
+        setAmountOnBasket(() => {
+
+            const filteredBasket = basket.filter(item => item.id === product.id);
+
+            return filteredBasket.length + 1
         })
-       
+
+
+
+    }
+
+    const removeFromBasket = (product) => {
+        setAmountOnBasket(() => {
+
+            let filteredBasket = basket.filter(item => item.id === product.id)
+            filteredBasket.pop()
+            setBasket((prevItems) => {
+                const filterPrev = prevItems.filter(item => item.id !== product.id)
+
+
+                return [...filterPrev, ...filteredBasket]
+            })
+
+            return filteredBasket.length
+        })
+
+
+
     }
 
 
@@ -38,9 +61,9 @@ const ProductCard = ({ product }) => {
 
     const updateCount = (
         <div className={cx('d-flex justify-content-between align-items-center', styles.updateCount)}>
-            <span className={styles.updateCountButton}>-</span>
-            <span>0</span>
-            <span className={styles.updateCountButton}>+</span>
+            <span className={styles.updateCountButton} onClick={() => removeFromBasket(product)}>-</span>
+            <span>{amountOnBasket}</span>
+            <span className={styles.updateCountButton} onClick={() => addToBasket(product)}>+</span>
         </div>
 
     )
@@ -60,7 +83,7 @@ const ProductCard = ({ product }) => {
             <p className={styles.productName}>{product.name}</p>
             {product.isShipmentFree && <p className='text-color-green'>Ücretsiz Teslimat</p>}
             {`${product.price}TL`}
-            {addButton}
+            {amountOnBasket === 0 ? addButton : updateCount}
 
         </div>
     )

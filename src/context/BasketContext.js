@@ -11,7 +11,7 @@ export const BasketProvider = ({ children }) => {
 
 
     useEffect(() => {
-     console.log(basket)
+    //  console.log(basket)
     })
     return (
         <BasketContext.Provider value={[basket, setBasket]}>

@@ -1,64 +1,72 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import styles from './CategoryFilter.module.scss'
 import MenuIcon from './../../images/menuicon.svg'
 import cx from 'classnames'
+
+
+import { ProductContext } from './../../context/ProductContext'
+
 const CategoryFilter = () => {
+
+    const [products, updateProducts] = useContext(ProductContext)
+
+
     const [categorys] = useState([
         {
             categorysName: 'Tüm Kategoriler',
-            categorys: 0
+            categoryId: 0
         },
         {
             categorysName: 'Elektronik',
-            categorys: 1
+            categoryId: 1
         },
         {
             categorysName: 'Ev ve Yaşam',
-            categorys: 2
+            categoryId: 2
         },
         {
             categorysName: 'Evcil Hayvan',
-            categorys: 3
+            categoryId: 3
         },
         {
             categorysName: 'Kitap',
-            categorys: 4
+            categoryId: 4
         },
         {
             categorysName: 'Oyuncak',
-            categorys: 5
+            categoryId: 5
         },
         {
             categorysName: 'Spor',
-            categorys: 6
+            categoryId: 6
         },
         {
             categorysName: 'Çiçek (120)',
-            categorys: 7
+            categoryId: 7
         },
         {
             categorysName: 'Hediye',
-            categorys: 8
+            categoryId: 8
         },
         {
             categorysName: 'Moda, Aksesuar',
-            categorys: 9
+            categoryId: 9
         },
         {
             categorysName: 'Ofis, Kırtasiye',
-            categorys: 10
+            categoryId: 10
         },
         {
             categorysName: 'Parfüm',
-            categorys: 11
+            categoryId: 11
         },
         {
             categorysName: 'Kişisel Bakım',
-            categorys: 12
+            categoryId: 12
         },
         {
             categorysName: 'Petshop',
-            categorys: 13
+            categoryId: 13
         },
     ])
 
@@ -66,6 +74,14 @@ const CategoryFilter = () => {
         index: 0,
         categorysName: null
     })
+
+    const updateSelected = (category, index) => {
+        const { categoryId, categorysName } = category
+        
+        setSelected({ index, categorysName })
+        updateProducts(null, categoryId)
+
+    }
 
     return (
         <div className="container mb-5">
@@ -80,7 +96,7 @@ const CategoryFilter = () => {
 
                         categorys.map((category, index) => (
 
-                            <button key={index} onClick={() => setSelected({ index: index, categorysName: category.categorysName })} className={cx(styles.categoryButton, 'fs-13', index === selected.index ? cx('bg-color-blue text-color-white') : null)}><div>{category.categorysName}</div></button>
+                            <button key={index} onClick={() => updateSelected(category, index)} className={cx(styles.categoryButton, 'fs-13', index === selected.index ? cx('bg-color-blue text-color-white') : null)}><div>{category.categorysName}</div></button>
                         ))
                     }
                 </div>

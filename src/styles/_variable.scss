@@ -5,17 +5,20 @@ $alt-gray: #edf1f2;
 $white: #ffffff;
 $blue: #044dc3;
 $red: #ff5b4d;
+$red-two: #f54257;
 $dark-gray: #f2f2f2;
 $darker-gray: #e6e6e6;
 $pink: #ffeae8;
 $light-blue: #e8f1ff;
-$light-green: #E2F7E1;
-$light-black:#707070;
-$lighter-black: #E2E7E9;
+$light-green: #e2f7e1;
+$light-black: #707070;
+$lighter-black: #e2e7e9;
+$yellow: #ffce00;
 
 $brand-colors: ("grey", $grey), ("green", $green), ("alt-gray", $alt-gray), ("white", $white), ("blue", $blue),
   ("red", $red), ("dark-gray", $dark-gray), ("darker-gray", $darker-gray), ("pink", $pink), ("light-blue", $light-blue),
-  ("light-green", $light-green),("light-black", $light-black),("lighter-black", $lighter-black);
+  ("light-green", $light-green), ("light-black", $light-black), ("lighter-black", $lighter-black), ("red-two", $red-two),
+  ("yellow", $yellow);
 
 @each $color in $brand-colors {
   .text-color-#{nth($color,1)} {

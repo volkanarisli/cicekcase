@@ -12,56 +12,56 @@
       "name": "Calvin Klein Euphoria EDP 100 ml Kadın Parfüm",
       "price": 145.61,
       "isShipmentFree": true,
-      "categoryId": 1
+      "categoryId": 6
     },
     {
       "id": 3,
       "name": "Gold Çizgili Vazoda 2 Dal Orkide Çiçeği",
       "price": 249.90,
       "isShipmentFree": true,
-      "categoryId": 1
+      "categoryId": 2
     },
     {
       "id": 4,
       "name": "925 Ayar Gümüş Çeyreklik Bileklik (Y)",
       "price": 329.90,
       "isShipmentFree": true,
-      "categoryId": 1
+      "categoryId": 10
     },
     {
       "id": 5,
       "name": "Büyük Boy Metal Osmanlı Bizans Satranç Takımı Parlak ve Cev...",
       "price": 499.90,
       "isShipmentFree": true,
-      "categoryId": 1
+      "categoryId": 4
     },
     {
       "id": 6,
       "name": "130 Cm Papyonlu Büyük Ayıcı (%100 Yerli)",
       "price": 19.90,
       "isShipmentFree": true,
-      "categoryId": 1
+      "categoryId": 7
     },
     {
       "id": 7,
       "name": "925 Ayar Gümüş Dualı İsimli Nazar İgnesi",
       "price": 89.90,
       "isShipmentFree": true,
-      "categoryId": 1
+      "categoryId": 14
     },
     {
       "id": 8,
       "name": "Özel Tatlar Çikolata Kutusu 300 gr",
       "price": 29.90,
       "isShipmentFree": true,
-      "categoryId": 1
+      "categoryId": 3
     },
     {
       "id": 9,
       "name": "Kucak Dolusu Aşk 25 Kırmızı Gül Buketi",
       "price": 59.90,
       "isShipmentFree": true,
-      "categoryId": 1
+      "categoryId": 2
     },
     {
       "id": 10,
@@ -82,63 +82,63 @@
       "name": "Excepteur deserunt cillum dolor excepteur do eiusmod in.",
       "price": 59.90,
       "isShipmentFree": true,
-      "categoryId": 1
+      "categoryId": 6
     },
     {
       "id": 13,
       "name": "Amet officia eu id deserunt Lorem ullamco consequat aliquip eu laboris sunt eu proident ex.",
       "price": 59.90,
       "isShipmentFree": true,
-      "categoryId": 1
+      "categoryId": 9
     },
     {
       "id": 14,
       "name": "Mollit deserunt id amet nostrud tempor dolor sunt.",
       "price": 59.90,
       "isShipmentFree": true,
-      "categoryId": 1
+      "categoryId": 11
     },
     {
       "id": 15,
       "name": "Consequat irure mollit eu tempor Lorem ullamco.",
       "price": 59.90,
       "isShipmentFree": true,
-      "categoryId": 1
+      "categoryId": 12
     },
     {
       "id": 16,
       "name": "Est do eu incididunt consequat est labore sunt aliquip.",
       "price": 59.90,
       "isShipmentFree": true,
-      "categoryId": 1
+      "categoryId": 3
     },
     {
       "id": 17,
       "name": "Mollit ipsum enim sit aliqua enim.",
       "price": 59.90,
       "isShipmentFree": true,
-      "categoryId": 1
+      "categoryId": 5
     },
     {
       "id": 18,
       "name": "Occaecat irure aliquip Lorem tempor et aliqua ea adipisicing velit.",
       "price": 59.90,
       "isShipmentFree": true,
-      "categoryId": 1
+      "categoryId": 6
     },
     {
       "id": 19,
       "name": "Elit pariatur voluptate culpa veniam cillum Lorem fugiat officia non qui occaecat dolor pariatur laborum.",
       "price": 59.90,
       "isShipmentFree": true,
-      "categoryId": 1
+      "categoryId": 8
     },
     {
       "id": 20,
       "name": "Reprehenderit non occaecat do consectetur irure excepteur exercitation.",
       "price": 59.90,
       "isShipmentFree": true,
-      "categoryId": 1
+      "categoryId": 2
     }
   ]
 }

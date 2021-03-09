@@ -1,18 +1,35 @@
 import styles from './Checkout.module.scss'
 import logo from '../../../images/checkout-logo.svg'
+import thunder from '../../../images/thunder.svg'
 
-import { OverlayTrigger, Tooltip } from 'react-bootstrap';
-import { useContext, useEffect } from 'react'
+import { OverlayTrigger, Tooltip, ProgressBar } from 'react-bootstrap';
+import { useContext } from 'react'
 
 import { BasketContext } from '../../../context/BasketContext'
+
 const Checkout = () => {
 
     const [basket, setBasket] = useContext(BasketContext)
 
+    const sumOfBasket = basket.reduce((a, b) => +a + +b.price, 0);
+
+    const percantage = sumOfBasket / 5
+
+    const tooltipContent = (
+        <div>
+            <p className="d-flex align-items-center fs-11 mb-2"><img className="mr-1" src={thunder} alt="thunder" />
+                <span className="text-color-yellow">
+                    {500 - sumOfBasket <= 0 ? 0 : (500 - sumOfBasket).toFixed(2)}
+                </span>
+                TL  ürün daha ekleyin kargo bedava
+            </p>
+            <ProgressBar className="ml-3" now={percantage} min={0} max={100} />
+        </div>
+    )
     return (
 
         <div className={styles.checkoutWrapper}>
-            <OverlayTrigger placement="bottom" overlay={<Tooltip >Tooltip!</Tooltip>}>
+            <OverlayTrigger show placement="bottom" overlay={<Tooltip>{tooltipContent}</Tooltip>}>
                 <div>
 
                     <div className={styles.checkout}>
