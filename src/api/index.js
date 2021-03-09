@@ -12,8 +12,7 @@ export const fetchData = async (query, categoryId) => {
         dynamaicUrl = `${url}?categoryId=${categoryId}`
     }
 
-    console.log(query, categoryId)
-    console.log(dynamaicUrl)
+  
 
     try {
         const { data } = await axios.get(dynamaicUrl);

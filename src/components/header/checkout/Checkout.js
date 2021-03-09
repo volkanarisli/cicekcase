@@ -9,7 +9,7 @@ import { BasketContext } from '../../../context/BasketContext'
 
 const Checkout = () => {
 
-    const [basket, setBasket] = useContext(BasketContext)
+    const [basket] = useContext(BasketContext)
 
     const sumOfBasket = basket.reduce((a, b) => +a + +b.price, 0);
 

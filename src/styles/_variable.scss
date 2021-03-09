@@ -6,6 +6,7 @@ $white: #ffffff;
 $blue: #044dc3;
 $red: #ff5b4d;
 $red-two: #f54257;
+$dark-red: #d01d32;
 $dark-gray: #f2f2f2;
 $darker-gray: #e6e6e6;
 $pink: #ffeae8;
@@ -18,7 +19,7 @@ $yellow: #ffce00;
 $brand-colors: ("grey", $grey), ("green", $green), ("alt-gray", $alt-gray), ("white", $white), ("blue", $blue),
   ("red", $red), ("dark-gray", $dark-gray), ("darker-gray", $darker-gray), ("pink", $pink), ("light-blue", $light-blue),
   ("light-green", $light-green), ("light-black", $light-black), ("lighter-black", $lighter-black), ("red-two", $red-two),
-  ("yellow", $yellow);
+  ("yellow", $yellow), ("dark-red", $dark-red);
 
 @each $color in $brand-colors {
   .text-color-#{nth($color,1)} {

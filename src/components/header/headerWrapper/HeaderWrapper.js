@@ -7,7 +7,7 @@ import cx from 'classnames'
 
 import SearchInput from '../searchInput/SearchInput'
 import Checkout from '../checkout/Checkout'
-import { BasketProvider } from '../../../context/BasketContext'
+
 
 const HeaderWrapper = () => {
 

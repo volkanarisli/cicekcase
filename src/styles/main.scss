@@ -60,7 +60,7 @@ p {
 
 .progress {
     max-height: 5px;
-    background-color: #d01d32;
+    background-color: $dark-red;
     .progress-bar {
         background-color: $yellow;
     }

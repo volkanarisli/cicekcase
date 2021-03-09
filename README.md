@@ -1,3 +1,8 @@
+# cicekcase
+First you need to install json-server globaly "npm install -g json-server"
+Before running this project first run "json-server --watch db.json" in a different terminal to start json server for dummy data 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

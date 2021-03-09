@@ -1,6 +1,6 @@
-import { useState, useContext } from 'react'
+import { useContext } from 'react'
 
-// import cx from 'classnames'
+
 import styles from './Products.module.scss'
 import ProductCard from '../ProductCard/ProductCard'
 import pin from './../../images/pin.svg'
@@ -12,7 +12,7 @@ import { ProductContext } from '../../context/ProductContext'
 const Products = () => {
     const [products] = useContext(ProductContext)
 
-    // console.log(products)
+    
     return (
 
         <div className="container">

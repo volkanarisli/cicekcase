@@ -1,4 +1,4 @@
-import { useState, createContext, useEffect } from 'react';
+import { useState, createContext } from 'react';
 
 
 
@@ -7,12 +7,6 @@ export const BasketContext = createContext();
 export const BasketProvider = ({ children }) => {
 
     const [basket, setBasket] = useState([])
-
-
-
-    useEffect(() => {
-    //  console.log(basket)
-    })
     return (
         <BasketContext.Provider value={[basket, setBasket]}>
             {children}

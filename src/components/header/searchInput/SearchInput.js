@@ -18,10 +18,10 @@ const SearchInput = () => {
     const [products, updateProducts] = useContext(ProductContext)
 
     const onChange = ({ target: { value } }) => {
-        if (value.length > 3) {
-            console.log('Burdayım')
+        if (value.length > 2) {
+
             updateProducts(value)
-        }else{
+        } else {
             updateProducts()
         }
     }
