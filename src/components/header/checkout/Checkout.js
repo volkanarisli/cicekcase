@@ -2,8 +2,13 @@ import styles from './Checkout.module.scss'
 import logo from '../../../images/checkout-logo.svg'
 
 import { OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { useContext, useEffect } from 'react'
 
+import { BasketContext } from '../../../context/BasketContext'
 const Checkout = () => {
+
+    const [basket, setBasket] = useContext(BasketContext)
+
     return (
 
         <div className={styles.checkoutWrapper}>
@@ -16,8 +21,8 @@ const Checkout = () => {
                     </div>
 
                     <div className={styles.itemCount}>
-                        1
-                  </div>
+                        {basket.length}
+                    </div>
                 </div>
             </OverlayTrigger>
 

@@ -1,20 +1,16 @@
 import axios from 'axios';
 
-const url = 'https://covid19.mathdro.id/api';
+const url = 'http://localhost:3000/products';
 
-export const fetchData = async (country) => {
-    const changeableUrl = country ? `${url}/countries/${country}` : url
+export const fetchData = async () => {
+    // const changeableUrl = country ? `${url}/countries/${country}` : url
+    // data: { id, name, price, isShipmentFree, categoryId }
 
     try {
-        const { data: { confirmed, recovered, deaths, lastUpdate } } = await axios.get(changeableUrl);
+        const { data } = await axios.get(url);
 
-
-        return {
-            confirmed,
-            recovered,
-            deaths,
-            lastUpdate,
-        }
+        
+        return data
     } catch (e) {
         console.error(e)
     }
@@ -23,31 +19,31 @@ export const fetchData = async (country) => {
 }
 
 
-export const fetchDailyData = async () => {
-    try {
-        const { data } = await axios.get(`${url}/daily`);
+// export const fetchDailyData = async () => {
+//     try {
+//         const { data } = await axios.get(`${url}/daily`);
 
-        const modifiedData = data.map((dailyData) => ({
-            confirmed: dailyData.confirmed.total,
-            deaths: dailyData.deaths.total,
-            date: dailyData.reportDate
-        }))
-        return modifiedData
-    } catch (e) {
-        console.error(e)
-    }
-
-
-}
+//         const modifiedData = data.map((dailyData) => ({
+//             confirmed: dailyData.confirmed.total,
+//             deaths: dailyData.deaths.total,
+//             date: dailyData.reportDate
+//         }))
+//         return modifiedData
+//     } catch (e) {
+//         console.error(e)
+//     }
 
 
-export const fetchCountries = async () => {
-    try {
-        const { data: { countries } } = await axios.get(`${url}/countries`);
-        return countries.map((country => country.name))
-    } catch (e) {
-        console.error(e)
-    }
+// }
 
 
-}
+// export const fetchCountries = async () => {
+//     try {
+//         const { data: { countries } } = await axios.get(`${url}/countries`);
+//         return countries.map((country => country.name))
+//     } catch (e) {
+//         console.error(e)
+//     }
+
+
+// }

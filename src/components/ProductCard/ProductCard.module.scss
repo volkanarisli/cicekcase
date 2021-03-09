@@ -1,0 +1,33 @@
+@import "./../../styles/variable";
+
+.productCard {
+    padding: 15px;
+    border: 1px solid #e2e7e9;
+    border-radius: 10px;
+    max-width: 270px;
+    margin-bottom: 30px;
+
+    img {
+        border-radius: 10px;
+        width: 244px;
+    }
+    .productName {
+        min-height:100px;
+    }
+}
+.updateCount {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #e2e7e9;
+    border-radius: 25px;
+    padding: 5px;
+
+    .updateCountButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 1px solid $blue;
+        background-color: $light-blue;
+        padding: 0px 8px;
+    }
+}

@@ -88,12 +88,12 @@ const CompanyInfo = () => {
                 <div className="d-flex mb-3">
                     {
 
-                        logos.map(logo => <img height='27' src={logo.platform} alt='Logo' className="mr-4" />)
+                        logos.map((logo, index) => <img height='27' src={logo.platform} alt='Logo' className="mr-4" key={index} />)
 
                     }
 
                 </div>
-                <p className={cx(styles.info,'fs-15')} >
+                <p className={cx(styles.info, 'fs-15')} >
                     CicekSepeti.com olarak kişisel verilerinizin gizliliğini önemsiyoruz. 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında oluşturduğumuz aydınlatma metnine buradan ulaşabilirsiniz.
                 </p>
 
@@ -106,12 +106,12 @@ const CompanyInfo = () => {
 
 
 
-                    infos.map(info => (
-                        <div className="m-2">
+                    infos.map((info, index) => (
+                        <div className="m-2" key={index}>
                             <p className="fs-18 text-color-blue mb-2">{info.title}</p>
                             <div className="d-flex flex-column">
                                 {
-                                    info.subLinks.map(link => <p className="fs-15 mb-2">{link}</p>)
+                                    info.subLinks.map((link, i) => <p className="fs-15 mb-2" key={i}>{link}</p>)
                                 }
                             </div>
 

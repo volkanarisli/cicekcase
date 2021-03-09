@@ -22,7 +22,7 @@ const SearchInput = () => {
                     <img src={searchIcon} alt="search"/>
 
                 </div>
-                <button className={cx('searchButton',styles.absoluteButton)}>
+                <button className={cx('button',styles.absoluteButton)}>
                     Ara
                 </button>
             </div>
