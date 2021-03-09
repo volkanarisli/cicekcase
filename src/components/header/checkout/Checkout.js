@@ -29,6 +29,7 @@ const Checkout = () => {
     return (
 
         <div className={styles.checkoutWrapper}>
+            {/* default set to open  */}
             <OverlayTrigger show placement="bottom" overlay={<Tooltip>{tooltipContent}</Tooltip>}>
                 <div>
 
