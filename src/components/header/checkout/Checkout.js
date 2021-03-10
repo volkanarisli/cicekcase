@@ -17,12 +17,17 @@ const Checkout = () => {
 
     const tooltipContent = (
         <div>
-            <p className="d-flex align-items-center fs-11 mb-2"><img className="mr-1" src={thunder} alt="thunder" />
-                <span className="text-color-yellow">
-                    {500 - sumOfBasket <= 0 ? 0 : (500 - sumOfBasket).toFixed(2)}
-                </span>
+            {
+                500 - sumOfBasket <= 0 ?
+                    <p>Kargonuz Bedava</p>
+                    :
+                    <p className="d-flex align-items-center fs-11 mb-2"><img className="mr-1" src={thunder} alt="thunder" />
+                        <span className="text-color-yellow">
+                            {(500 - sumOfBasket).toFixed(2)}
+                        </span>
                 TL  ürün daha ekleyin kargo bedava
             </p>
+            }
             <ProgressBar className="ml-3" now={percantage} min={0} max={100} />
         </div>
     )
